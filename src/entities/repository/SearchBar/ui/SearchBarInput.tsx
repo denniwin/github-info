@@ -9,7 +9,7 @@ export const SearchBarInput = memo(
   ({ query, handleChangeQuery }: SearchBarInputProps) => {
     return (
       <input
-        type="text"
+        type="search"
         value={query}
         onChange={(e) => handleChangeQuery(e)}
         placeholder="Search GitHub"
