@@ -1,0 +1,26 @@
+.repository-details {
+    padding: 2rem 0;
+    font-size: 2rem;
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        & img {
+            width: 35rem;
+            height: 35rem;
+            object-fit: contain;
+        }
+    }
+
+    &__rating {
+        color: #e3b341;
+    }
+
+    &__stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

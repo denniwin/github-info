@@ -1,0 +1,188 @@
+@import './normalize.scss';
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.5em;
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #0d1117;
+    color: #fff;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 4.0rem;
+    line-height: 1.2;
+    letter-spacing: -.1rem;
+
+    @media (min-width: 550px) {
+        font-size: 5.0rem;
+    }
+}
+
+p {
+    margin-top: 0;
+}
+
+a {
+    color: #4493f8;
+}
+
+a:hover {
+    color: #0FA0CE;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    display: inline-block;
+    height: 38px;
+    padding: 0 14px;
+    color: #fff;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #30363d;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:hover {
+        color: #ffffffcb;
+        border-color: #30363d;
+        outline: 0;
+    }
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+    color: #FFF;
+    background-color: #4493f8;
+    border-color: #4493f8;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    color: #fff;
+    min-height: 32px;
+    padding: 6px 10px;
+    background-color: #30363d;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    box-shadow: none;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+        border: 1px solid #4493f8;
+        outline: 0;
+    }
+}
+
+textarea {
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+label,
+legend {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+fieldset {
+    padding: 0;
+    border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
+
+label>.label-body {
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: normal;
+}
+
+ul {
+    list-style: circle inside;
+}
+
+ol {
+    list-style: decimal inside;
+}
+
+ol,
+ul {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin: 1.5rem 0 1.5rem 3rem;
+    font-size: 90%;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+hr {
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+    border-width: 0;
+    border-top: 1px solid #E1E1E1;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+
+@media (min-width: 400px) {
+    .container {
+        width: 85%;
+        padding: 0;
+    }
+}

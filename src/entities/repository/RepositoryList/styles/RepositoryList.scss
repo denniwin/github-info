@@ -1,0 +1,14 @@
+.repository-list {
+    padding: 1rem;
+
+    &__item {
+        transition: all .3s;
+        padding: 0.5rem 1rem;
+        user-select: none;
+
+        &:hover {
+            transition: all .3s;
+            background-color: #0000003b;
+        }
+    }
+}
