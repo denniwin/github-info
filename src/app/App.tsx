@@ -1,10 +1,12 @@
-import { client } from "@/graphql";
-import { Header } from "@/shared/components/Header";
-import { LoadingSpinner } from "@/shared/components/Spinner";
 import { ApolloProvider } from "@apollo/client";
 import { Suspense } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import { client } from "@/graphql";
+import { Header } from "@/shared/components/Header";
+import { LoadingSpinner } from "@/shared/components/Spinner";
+
 import { HomePage, RepositoryPage } from "./routes";
 import { store } from "./store";
 

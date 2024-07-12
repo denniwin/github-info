@@ -1,14 +1,17 @@
-import { useAppDispatch } from "@/app/hooks";
-import { setPage } from "@/features/repositories/repositorySlice";
-import { setQuery } from "@/features/search/searchSlice";
-import { useDebounce } from "@/shared/hooks/useDebounce";
+import "../styles/SearchBar.scss";
+
 import React, {
   useCallback,
   useEffect,
   useLayoutEffect,
   useState,
 } from "react";
-import "../styles/SearchBar.scss";
+
+import { useAppDispatch } from "@/app/hooks";
+import { setPage } from "@/features/repositories/repositorySlice";
+import { setQuery } from "@/features/search/searchSlice";
+import { useDebounce } from "@/shared/hooks/useDebounce";
+
 import { SearchBarInput } from "./SearchBarInput";
 
 export const SearchBar = () => {
