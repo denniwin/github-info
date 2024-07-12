@@ -1,5 +1,6 @@
-import { getInitialQuery } from "@/shared/utils/getInitialQuery";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+import { getInitialQuery } from "@/shared/utils/getInitialQuery";
 
 export interface SearchState {
   query: string;

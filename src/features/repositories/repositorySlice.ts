@@ -1,4 +1,5 @@
-import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice,PayloadAction } from "@reduxjs/toolkit";
+
 import { RootState } from "@/app/store";
 import { client } from "@/graphql";
 import { SEARCH_REPOSITORIES } from "@/graphql/queries";

@@ -1,5 +1,6 @@
-import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/Header.scss";
+
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const { pathname } = useLocation();

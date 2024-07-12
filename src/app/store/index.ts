@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import repositorySlice from "../../features/repositories/repositorySlice";
 import searchSlice from "../../features/search/searchSlice";
 
