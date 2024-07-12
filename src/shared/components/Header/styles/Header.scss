@@ -11,27 +11,43 @@
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 992px) {
+        padding: 15px 0;
+    }
+
+
+    & h2 {
+        margin: 0;
+        padding: 0;
+    }
+
     &__repository-details {
         display: flex;
         justify-content: center;
         align-items: center;
 
+        @media (max-width: 992px) {
+            justify-content: space-between;
+            gap: 15px;
+        }
+
         & button {
             position: absolute;
             left: 0;
+
+            @media (max-width: 992px) {
+                position: static;
+            }
         }
 
         & span {
             font-size: 32px;
+
+            @media (max-width: 992px) {
+                font-size: 16px;
+            }
         }
     }
-}
-
-.logo {
-    display: inline-block;
-    color: $white;
-    font-size: 60px;
-    margin-left: 10px;
 }
 
 .nav {

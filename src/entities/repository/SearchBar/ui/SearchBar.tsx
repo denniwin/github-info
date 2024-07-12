@@ -47,10 +47,17 @@ export const SearchBar = () => {
   }, [debouncedQuery, dispatch]);
 
   return (
-    <div className="searchBar">
-      <div className="searchBar__field">
-        <SearchBarInput handleChangeQuery={handleChangeQuery} query={query} />
+    <section className="search">
+      <div className="container">
+        <div className="searchBar">
+          <div className="searchBar__field">
+            <SearchBarInput
+              handleChangeQuery={handleChangeQuery}
+              query={query}
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };

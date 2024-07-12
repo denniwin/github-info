@@ -18,7 +18,8 @@ export const RepositoryDetails = () => {
   } = useFetchRepositoryData(owner, name);
 
   const infoRepository = `${owner} | ${name}`;
-  const ratingForTitle = `\u2605 ${repository?.stargazerCount.toString()}` || "";
+  const ratingForTitle =
+    `\u2605 ${repository?.stargazerCount.toString()}` || "";
 
   useTitle(infoRepository, ratingForTitle);
 
@@ -39,41 +40,45 @@ export const RepositoryDetails = () => {
   } = repository;
 
   return (
-    <div className="repository-details">
-      <h1 className="repository-details__name">{nameRepo}</h1>
-      <div className="repository-details__info">
-        <div className="repository-details__about">
-          {owner && (
-            <p>
-              Owner:{" "}
-              <a href={url} target="_blank" rel="noopener noreferrer">
-                {login}
-              </a>
-            </p>
-          )}
-          <p>
-            Rating:{" "}
-            <span className="repository-details__rating">
-              {stargazerCount} stars
-            </span>
-          </p>
-          <p>Last updated: {new Date(updatedAt).toLocaleDateString()}</p>
-          {!!languages.length && (
-            <>
-              <p>Stack:</p>
-              <div className="repository-details__stack">
-                {languages.map((language) => (
-                  <Badge key={language.name} item={language.name} />
-                ))}
-              </div>
-            </>
-          )}
-        </div>
-        <div className="repository-details__avatar">
-          <img src={avatarUrl} alt={`${login}'s avatar`} />
+    <section>
+      <div className="container">
+        <div className="repository-details">
+          <h1 className="repository-details__name">{nameRepo}</h1>
+          <div className="repository-details__info">
+            <div className="repository-details__about">
+              {owner && (
+                <p>
+                  Owner:{" "}
+                  <a href={url} target="_blank" rel="noopener noreferrer">
+                    {login}
+                  </a>
+                </p>
+              )}
+              <p>
+                Rating:{" "}
+                <span className="repository-details__rating">
+                  {stargazerCount} stars
+                </span>
+              </p>
+              <p>Last updated: {new Date(updatedAt).toLocaleDateString()}</p>
+              {!!languages.length && (
+                <>
+                  <p>Stack:</p>
+                  <div className="repository-details__stack">
+                    {languages.map((language) => (
+                      <Badge key={language.name} item={language.name} />
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+            <div className="repository-details__avatar">
+              <img src={avatarUrl} alt={`${login}'s avatar`} />
+            </div>
+          </div>
+          {description && <p>Description: {description}</p>}
         </div>
       </div>
-      {description && <p>Description: {description}</p>}
-    </div>
+    </section>
   );
 };
