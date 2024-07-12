@@ -66,20 +66,24 @@ export const RepositoryList = () => {
     );
 
   return (
-    <div className="repository-list">
-      {repositoriesToShow.map(
-        ({ id, name, stargazerCount, owner, updatedAt, url }, index) => (
-          <div key={id} className="repository-list__item">
-            {startIndex + index + 1}.{" "}
-            <Link to={`/repository/${owner.login}/${name}`}>{name}</Link> -{" "}
-            {stargazerCount} stars - last updated at{" "}
-            {new Date(updatedAt).toLocaleDateString()} -{" "}
-            <a href={url} target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          </div>
-        )
-      )}
-    </div>
+    <section className="repository">
+      <div className="container">
+        <div className="repository-list">
+          {repositoriesToShow.map(
+            ({ id, name, stargazerCount, owner, updatedAt, url }, index) => (
+              <div key={id} className="repository-list__item">
+                {startIndex + index + 1}.{" "}
+                <Link to={`/repository/${owner.login}/${name}`}>{name}</Link> -{" "}
+                {stargazerCount} stars - update{" "}
+                {new Date(updatedAt).toLocaleDateString()} -{" "}
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
+              </div>
+            )
+          )}
+        </div>
+      </div>
+    </section>
   );
 };

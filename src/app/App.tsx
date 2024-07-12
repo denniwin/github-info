@@ -16,17 +16,15 @@ export const App = () => {
       <Provider store={store}>
         <BrowserRouter>
           <Header />
-          <div className="container">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route
-                  path="/repository/:owner/:name"
-                  element={<RepositoryPage />}
-                />
-              </Routes>
-            </Suspense>
-          </div>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route
+                path="/repository/:owner/:name"
+                element={<RepositoryPage />}
+              />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </Provider>
     </ApolloProvider>

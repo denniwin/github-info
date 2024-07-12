@@ -27,16 +27,22 @@ export const Paginator = () => {
   };
 
   return (
-    <div className="pagination">
-      {Array.from({ length: totalPages }, (_, index) => (
-        <button
-          className={`pagination__item ${page === index + 1 ? "current" : ""}`}
-          key={index + 1}
-          onClick={handlePageClick(index + 1)}
-        >
-          {index + 1}
-        </button>
-      ))}
-    </div>
+    <section className="pagination-section">
+      <div className="container">
+        <div className="pagination">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              className={`pagination__item ${
+                page === index + 1 ? "current" : ""
+              }`}
+              key={index + 1}
+              onClick={handlePageClick(index + 1)}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
