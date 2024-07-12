@@ -1,10 +1,11 @@
 import { client } from "@/graphql";
-import { HomePage } from "@/pages/Home";
-import { RepositoryPage } from "@/pages/RepoDetail";
 import { Header } from "@/shared/components/Header";
+import { LoadingSpinner } from "@/shared/components/Spinner";
 import { ApolloProvider } from "@apollo/client";
+import { Suspense } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HomePage, RepositoryPage } from "./routes";
 import { store } from "./store";
 
 export const App = () => {
@@ -14,13 +15,15 @@ export const App = () => {
         <BrowserRouter>
           <Header />
           <div className="container">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route
-                path="/repository/:owner/:name"
-                element={<RepositoryPage />}
-              />
-            </Routes>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route
+                  path="/repository/:owner/:name"
+                  element={<RepositoryPage />}
+                />
+              </Routes>
+            </Suspense>
           </div>
         </BrowserRouter>
       </Provider>
