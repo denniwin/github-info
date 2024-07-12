@@ -1,6 +1,6 @@
-import "../styles/LoadingSpinner.scss";
-
 import { WrapperMessage } from "../../WrapperMessage";
+
+import "../styles/LoadingSpinner.scss";
 
 export const LoadingSpinner = () => {
   return (

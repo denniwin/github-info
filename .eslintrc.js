@@ -22,6 +22,26 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  overrides: [
+    {
+      files: ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      rules: {
+        "simple-import-sort/imports": [
+          "error",
+          {
+            groups: [
+              ["^\\u0000"],
+              ["^react$", "^@?\\w"],
+              ["^@", "^"],
+              ["^\\./"],
+              ["^.+\\.(module.css|module.scss|.css|.scss)$"],
+              ["^.+\\.(gif|png|svg|jpg)$"],
+            ],
+          },
+        ],
+      },
+    },
+  ],
   parserOptions: {
     sourceType: "module",
     ecmaVersion: "latest",

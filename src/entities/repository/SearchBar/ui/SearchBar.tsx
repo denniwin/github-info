@@ -1,5 +1,3 @@
-import "../styles/SearchBar.scss";
-
 import React, {
   useCallback,
   useEffect,
@@ -13,6 +11,8 @@ import { setQuery } from "@/features/search/searchSlice";
 import { useDebounce } from "@/shared/hooks/useDebounce";
 
 import { SearchBarInput } from "./SearchBarInput";
+
+import "../styles/SearchBar.scss";
 
 export const SearchBar = () => {
   const dispatch = useAppDispatch();
