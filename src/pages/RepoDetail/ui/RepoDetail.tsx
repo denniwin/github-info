@@ -1,4 +1,4 @@
-import { RepositoryDetails } from "../../../entities/repository/RepositoryDetails";
+import { RepositoryDetails } from "@/entities/repository/RepositoryDetails";
 
 export const RepositoryPage = () => {
   return <RepositoryDetails />;

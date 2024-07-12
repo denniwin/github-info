@@ -1,10 +1,9 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../app/store/store";
-import client from "../../graphql/client";
-import { SEARCH_REPOSITORIES } from "../../graphql/queries";
-import { getInitialCursor } from "../../shared/utils/getInitialCursor";
-import { getInitialPage } from "../../shared/utils/getInitialPage";
-
+import { RootState } from "@/app/store";
+import { client } from "@/graphql";
+import { SEARCH_REPOSITORIES } from "@/graphql/queries";
+import { getInitialCursor } from "@/shared/utils/getInitialCursor";
+import { getInitialPage } from "@/shared/utils/getInitialPage";
 export interface RepositoryState {
   repositories: Repository[];
   totalCount: number;

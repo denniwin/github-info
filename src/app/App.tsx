@@ -1,11 +1,11 @@
+import { client } from "@/graphql";
+import { HomePage } from "@/pages/Home";
+import { RepositoryPage } from "@/pages/RepoDetail";
+import { Header } from "@/shared/components/Header";
 import { ApolloProvider } from "@apollo/client";
 import { Provider } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import client from "../graphql/client";
-import { HomePage } from "../pages/Home";
-import { RepositoryPage } from "../pages/RepoDetail";
-import { Header } from "../shared/components/Header";
-import { store } from "./store/store";
+import { store } from "./store";
 
 export const App = () => {
   return (

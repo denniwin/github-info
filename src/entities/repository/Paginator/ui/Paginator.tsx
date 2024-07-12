@@ -1,9 +1,9 @@
-import { useAppDispatch, useAppSelector } from "../../../../app/hooks/hooks";
 import {
   fetchRepositories,
   setCursor,
   setPage,
-} from "../../../../features/repositories/repositorySlice";
+} from "@/features/repositories/repositorySlice";
+import { useAppDispatch, useAppSelector } from "@/app/hooks";
 import "../styles/Paginator.scss";
 
 export const Paginator = () => {

@@ -1,6 +1,4 @@
-import { useCallback, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../../../app/hooks/hooks";
+import { useAppDispatch, useAppSelector } from "@/app/hooks";
 import {
   fetchRepositories,
   selectCursor,
@@ -8,12 +6,14 @@ import {
   selectLoading,
   selectRepositories,
   setPage,
-} from "../../../../features/repositories/repositorySlice";
-import { setQuery } from "../../../../features/search/searchSlice";
-import { ErrorMessage } from "../../../../shared/components/Error";
-import { LoadingSpinner } from "../../../../shared/components/Spinner";
-import { WrapperMessage } from "../../../../shared/components/WrapperMessage";
-import { getInitialPage } from "../../../../shared/utils/getInitialPage";
+} from "@/features/repositories/repositorySlice";
+import { setQuery } from "@/features/search/searchSlice";
+import { ErrorMessage } from "@/shared/components/Error";
+import { LoadingSpinner } from "@/shared/components/Spinner";
+import { WrapperMessage } from "@/shared/components/WrapperMessage";
+import { getInitialPage } from "@/shared/utils/getInitialPage";
+import { useCallback, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../styles/RepositoryList.scss";
 
 export const RepositoryList = () => {

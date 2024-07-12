@@ -1,9 +1,9 @@
+import { GET_REPOSITORY } from "@/graphql/queries";
+import { Badge } from "@/shared/components/Badge";
+import { ErrorMessage } from "@/shared/components/Error";
+import { LoadingSpinner } from "@/shared/components/Spinner";
 import { useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
-import { GET_REPOSITORY } from "../../../../graphql/queries";
-import { Badge } from "../../../../shared/components/Badge";
-import { ErrorMessage } from "../../../../shared/components/Error";
-import { LoadingSpinner } from "../../../../shared/components/Spinner";
 import "../styles/RepositoryDetails.scss";
 
 export const RepositoryDetails = () => {

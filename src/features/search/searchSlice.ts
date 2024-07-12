@@ -1,12 +1,12 @@
+import { getInitialQuery } from "@/shared/utils/getInitialQuery";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { getInitialQuery } from "../../shared/utils/getInitialQuery";
 
 export interface SearchState {
   query: string;
 }
 
 const initialState: SearchState = {
-  query: getInitialQuery() || "",
+  query: getInitialQuery() && "",
 };
 
 const searchSlice = createSlice({
