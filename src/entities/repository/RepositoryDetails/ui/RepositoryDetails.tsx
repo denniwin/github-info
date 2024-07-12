@@ -3,18 +3,24 @@ import { useParams } from "react-router-dom";
 import { Badge } from "@/shared/components/Badge";
 import { ErrorMessage } from "@/shared/components/Error";
 import { LoadingSpinner } from "@/shared/components/Spinner";
+import { useTitle } from "@/shared/hooks/useTitle";
 import { useFetchRepositoryData } from "../hooks/useFetchRepositoryData";
 import { RepositoryDetailsParams } from "../types";
 
 import "../styles/RepositoryDetails.scss";
 
 export const RepositoryDetails = () => {
-  const { owner, name } = useParams<RepositoryDetailsParams>();
+  const { owner = "", name = "" } = useParams<RepositoryDetailsParams>();
   const {
     data: repository,
     loading,
     error,
-  } = useFetchRepositoryData(owner || "", name || "");
+  } = useFetchRepositoryData(owner, name);
+
+  const infoRepository = `${owner} | ${name}`;
+  const ratingForTitle = `\u2605 ${repository?.stargazerCount.toString()}` || "";
+
+  useTitle(infoRepository, ratingForTitle);
 
   if (loading) return <LoadingSpinner />;
   if (error) return <ErrorMessage message={error.message} />;
