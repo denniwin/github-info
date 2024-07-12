@@ -1,5 +1,3 @@
-import "../styles/RepositoryList.scss";
-
 import { useCallback, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -17,6 +15,8 @@ import { ErrorMessage } from "@/shared/components/Error";
 import { LoadingSpinner } from "@/shared/components/Spinner";
 import { WrapperMessage } from "@/shared/components/WrapperMessage";
 import { getInitialPage } from "@/shared/utils/getInitialPage";
+
+import "../styles/RepositoryList.scss";
 
 export const RepositoryList = () => {
   const currentUser = "denniwin";

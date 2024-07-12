@@ -1,13 +1,12 @@
-import "../styles/RepositoryDetails.scss";
-
 import { useParams } from "react-router-dom";
 
 import { Badge } from "@/shared/components/Badge";
 import { ErrorMessage } from "@/shared/components/Error";
 import { LoadingSpinner } from "@/shared/components/Spinner";
-
 import { useFetchRepositoryData } from "../hooks/useFetchRepositoryData";
 import { RepositoryDetailsParams } from "../types";
+
+import "../styles/RepositoryDetails.scss";
 
 export const RepositoryDetails = () => {
   const { owner, name } = useParams<RepositoryDetailsParams>();
