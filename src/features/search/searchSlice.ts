@@ -7,7 +7,7 @@ export interface SearchState {
 }
 
 const initialState: SearchState = {
-  query: getInitialQuery() && "",
+  query: getInitialQuery() || "",
 };
 
 const searchSlice = createSlice({
